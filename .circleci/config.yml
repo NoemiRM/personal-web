@@ -11,4 +11,3 @@ jobs:
      - run: docker build -t pilar07/holadocker:$CIRCLE_SHA1 .
      - run: docker push pilar07/holadocker:$CIRCLE_SHA1
      - run: ssh -o StrictHostKeyChecking=no root@143.198.234.102 "/bin/bash /root/personal-web/deploy.sh $CIRCLE_SHA1"
-
